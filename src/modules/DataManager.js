@@ -1,6 +1,6 @@
 //from Former Nutshell project Data Managers.
 //const remoteURL = "https://state-quarters-api.herokuapp.com"
-const remoteURL = "https://state-quarters-collector.onrender.com"
+const remoteURL = "https://state-quarters-collector.onrender.com/api"
 
 export default Object.create(null, {
     get: {
