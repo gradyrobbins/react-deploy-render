@@ -41,7 +41,8 @@ Therefore, you need to modify your application code **before you deploy** to mak
 1. Build command should be `npm install && npm run build`.
 1. Start command should be `npm start`.
 1. Click the **Advanced** button at the bottom, but above the **Create Web Service** button.
-1. Click the **Add Disk** button.
+1. Click the **Add Disk** button.  Adding a disk prevents zero downtime deploys.  Create a disk to store application data that needs to persist across deploys. You can mount it on any absolute path and read and write to it using standard filesystem primitives.
+
 1. In the name field, you can provide any descriptive label you want for this disk (e.g. database)
 1. Mount path should be `/var/data`
 1. Choose `5GB` for the size.
