@@ -18,7 +18,7 @@ export default class QDetail extends Component {
         const newState = {}
         DataManager.getASpecificQ_expand(this.props.match.params.quarterId)
             .then(singleQ => {
-            newState.singleQ = singleQ
+                newState.singleQ = singleQ
                 newState.notes = singleQ.notes
                 newState.isLoaded = true
                 console.log(" single Q name:  ", singleQ.usa.name)
@@ -35,7 +35,7 @@ export default class QDetail extends Component {
 
     // //STAGE 2 - Do some stuff to it; PUT method takes the entire new object and overwrites the old one using the old one's id in database.json
     thingsChange = (id, editedObject) => {
-        return fetch(`https://state-quarters-api.herokuapp.com/quarters/${id}`, {
+        return fetch(`https://state-quarters-collector.onrender.com/quarters/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -55,40 +55,64 @@ export default class QDetail extends Component {
             notes: this.state.notes
         }
         console.log("this.state.singleQ.usa :", this.state.singleQ.usa)
-        return (<React.Fragment>
-            <br />
-            <br />
-            <br />
-            <br />
-            <img alt="stock-qtr" src={stock_qtr} className="icon-qtr" />
-            <br />
+        return ( < React.Fragment >
+            <
+            br / >
+            <
+            br / >
+            <
+            br / >
+            <
+            br / >
+            <
+            img alt = "stock-qtr"
+            src = { stock_qtr }
+            className = "icon-qtr" / >
+            <
+            br / >
 
 
 
-            {/* initially i was unable to access the State's Name in {this.state.singleQ.usa.name}, because the componentDidMount returned an unresolved promise and continued with the render part of this component.  Now i have a ternary/conditional, below, that determines if the promise is resolved */}
-            <div key={this.state.singleQ.id} className="QDetail" >
-                {this.state.isLoaded ? <h3> {this.state.singleQ.usa.name} </h3> : <h3> awaiting promise's resolution </h3>}
+            { /* initially i was unable to access the State's Name in {this.state.singleQ.usa.name}, because the componentDidMount returned an unresolved promise and continued with the render part of this component.  Now i have a ternary/conditional, below, that determines if the promise is resolved */ } <
+            div key = { this.state.singleQ.id }
+            className = "QDetail" > {
+                this.state.isLoaded ? < h3 > { this.state.singleQ.usa.name } < /h3> : <h3> awaiting promise's resolution </h
+                3 >
+            }
 
-                {/* <h6>Specific State Quarter ID# &nbsp; {this.state.singleQ.usaId} </h6> */}
-                <br />
-                <div className="form-group">
-                    <label htmlFor="setup">Edit notes</label>
-                    <input type="text" required={true}
-                        onChange={this.handleFieldChange}
-                        id="notes"
-                        placeholder={this.state.singleQ.notes}
-                        value={this.state.notes} />
-                </div>
-                <button className="btn btn-primary" id={this.state.singleQ.id} onClick={() => {
+            { /* <h6>Specific State Quarter ID# &nbsp; {this.state.singleQ.usaId} </h6> */ } <
+            br / >
+            <
+            div className = "form-group" >
+            <
+            label htmlFor = "setup" > Edit notes < /label> <
+            input type = "text"
+            required = { true }
+            onChange = { this.handleFieldChange }
+            id = "notes"
+            placeholder = { this.state.singleQ.notes }
+            value = { this.state.notes }
+            /> < /
+            div > <
+            button className = "btn btn-primary"
+            id = { this.state.singleQ.id }
+            onClick = {
+                () => {
                     this.thingsChange(`${this.state.singleQ.id}`, editedQuarter)
-                    .then(() => { this.props.history.push(`/collection/${this.state.singleQ.collectionId}`) })
-                }}> Edit </button>
-                <button className="btn btn-primary" onClick={() => {
+                        .then(() => { this.props.history.push(`/collection/${this.state.singleQ.collectionId}`) })
+                }
+            } > Edit < /button> <
+            button className = "btn btn-primary"
+            onClick = {
+                () => {
                     this.props.history.push(`/collection/${this.state.singleQ.collectionId}`)
-                }}> Return without making any changes </button>
-                <br />
-                <br />
-            </div>
-        </React.Fragment>)
+                }
+            } > Return without making any changes < /button> <
+            br / >
+            <
+            br / >
+            <
+            /div> < /
+            React.Fragment > )
     }
 }
