@@ -15,29 +15,15 @@ class CollectionsList extends Component {
 
                 <section className="collections">
                     <br />
-                    {/* <nav>
-                        <ul className="nav nav-pills"> */}
                     {
                         this.props.collections.map(collection =>
 
-
-                            // <Link className="nav-link" to=/collection/:collectionId(\d+)>{collection.collectorsName}
-                            // </Link>
-
                             <button key={collection.id} className="btn btn-primary" id={collection.id} onClick={() => {
-                                this.props.history.push(`/collection/${collection.id}`)
-                                // console.log(` button # ${collection.id} clicked`)
-                            }}
-                            >
+                                this.props.history.push(`/collection/${collection.id}`)}}>
                                 {collection.collectorsName}  </button>
-
-
                         )
                     }
-                    {/* </ul>
-</nav> */}
                 </section>
-
             </React.Fragment>
         )
     }
