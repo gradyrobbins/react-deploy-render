@@ -53,7 +53,7 @@ export default class CollectionDetail extends Component {
         }))
         .then(() => this.props.history.push("/collections"))
 
-    
+
 
 
 
@@ -98,21 +98,6 @@ export default class CollectionDetail extends Component {
                         </div>
                     </section>
                     <hr />
-
-                    <HasCard
-                        // {...props}
-                        quarters={this.state.userSpecific}
-                        // quarters={this.props.quarters}
-                        getASpecificCollection={this.fetchSpecificCollection}
-                        deleteQ={this.deleteQ}
-                        fetchSpecificQ={this.fetchSpecificQ}
-                        editQ={this.props.editQ}
-                        singleQ={this.state.singleQ}
-                        history={this.props.history}
-                        match={this.props.match}
-                        collections={this.props.collections}
-                    />
-                    <hr/>
 
                     <NeedsCard
                         // {...props}

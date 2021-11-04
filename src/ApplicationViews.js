@@ -2,14 +2,14 @@ import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from 'react';
 
 import DataManager from './modules/DataManager'
-import Login from './components/login/LoginForm'
+
 import Learn from './components/Learn/Learn'
 
 import CollectionDetail from './components/Collection/CollectionDetail'
 import CollectionsList from './components/Dashboard/CollectionsList';
 import AddAQuarterForm from './components/Collection/Needs/AddAQuarterForm'
 import QDetail from './components/Collection/QDetail'
-// import FunFacts from './components/Learn/FunFacts';
+
 
 export default class ApplicationViews extends Component {
 
@@ -83,7 +83,7 @@ export default class ApplicationViews extends Component {
 
   render() {
     return (<React.Fragment>
-      <Route exact path="/login" component={Login} />
+
       <Route exact path="/learn" render={props => {
         return <React.Fragment>
           <Learn
@@ -107,7 +107,7 @@ export default class ApplicationViews extends Component {
       />
 
       <Route exact path="/collection/:collectionId(\d+)" render={props => {
-        if (this.isAuthenticated()) {
+
           return <React.Fragment>
             <CollectionsList
               {...props}
@@ -127,25 +127,21 @@ export default class ApplicationViews extends Component {
             />
 
           </React.Fragment>
-        } else {
-          return <Redirect to="/" />
-        }
+
       }} />
       <Route exact path="/collection/:collectionId(\d+)/add" render={props => {
-        if (this.isAuthenticated()) {
+
           return <AddAQuarterForm
             {...props}
             collections={this.state.collections}
             addQ={this.addQ}
             usas={this.state.usas}
           />
-          // }} />
-        } else {
-          return <Redirect to="/" />
-        }
+
+
       }} />
       <Route exact path="/collection/edit/:quarterId(\d+)" render={(props) => {
-        if (this.isAuthenticated()) {
+        
           return <React.Fragment>
             <QDetail
               {...props}
@@ -153,9 +149,7 @@ export default class ApplicationViews extends Component {
               fetchSpecificQ={this.fetchSpecificQ}
             />
           </React.Fragment>
-        } else {
-          return <Redirect to="/login" />
-        }
+
       }} />
 
     </React.Fragment>
