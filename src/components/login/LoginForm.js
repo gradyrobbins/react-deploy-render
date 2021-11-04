@@ -28,7 +28,7 @@ export default class Login extends Component {
         */
         //TODO fix naming conventions/ singular/plural
         DataManager.getAll("users").then((user) => {
-            // console.log(user)
+             console.log(user)
             const users = user.find(user => {
                 return user.email === this.state.email && user.password === this.state.password //verifies account is in DB
             })
