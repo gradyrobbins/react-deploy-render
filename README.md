@@ -14,12 +14,10 @@ Therefore, you need to modify your application code **before you deploy** to mak
 
 ### Setting up Repository
 
-1. `cd ~/workspace`
-- [x] Fork this repository to your account.
+ `cd ~/workspace`
+1. Fork this repository to your account.
 1. Clone your new repository to your machine.
-  - [x]  ```
-    git clone {github connection string} capstone-deploy
-    ```
+```git clone {github connection string} capstone-deploy```
 1. - [x]  `cd capstone-deploy`
 1. Copy all of your source code into the `src` sub-directory.
 1. If you installed any 3rd party `npm` tools, make sure you install them all again for this repository.
