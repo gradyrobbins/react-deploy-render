@@ -19,11 +19,7 @@ class NavBar extends Component {
                     </li>
 
                 </ul>
-                <button className="btn btn-primary" onClick={() => {
-                    localStorage.clear("credentials")
-                    document.location.href = 'https://state-quarters-collector.herokuapp.com/ '
-                }}
-                >LOG OUT</button>
+                
             </nav>
         )
     }

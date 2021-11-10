@@ -1,15 +1,11 @@
 import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from 'react';
-
 import DataManager from './modules/DataManager'
-
 import Learn from './components/Learn/Learn'
-
 import CollectionDetail from './components/Collection/CollectionDetail'
 import CollectionsList from './components/Dashboard/CollectionsList';
 import AddAQuarterForm from './components/Collection/Needs/AddAQuarterForm'
 import QDetail from './components/Collection/QDetail'
-
 
 export default class ApplicationViews extends Component {
 
@@ -141,7 +137,7 @@ export default class ApplicationViews extends Component {
 
       }} />
       <Route exact path="/collection/edit/:quarterId(\d+)" render={(props) => {
-        
+
           return <React.Fragment>
             <QDetail
               {...props}
