@@ -1,6 +1,12 @@
 # Deploy React Application to render.com and have your data persist
 
-Deploying your client side capstone to render.com and Enabling data persistence will incur additional charges, specifically: `Web Services/ adding Optional persistent disks`
+Deploying a "static site" to render.com is free. 
+Their docs have a `Create React App` quick start guide for reference.
+
+*BUT*
+
+Storing application data that needs to persist across deploys will incur additional charges, specifically,  `Add an SSD disk to any service`, quoted at $0.25/ GB per month
+
 
 ## Before You Get Started
 
@@ -9,6 +15,16 @@ When you set up your render.com service, you will be providing a name for it. Li
 The code in this repository will start `json-server` for you automatically and set up your service to make your API respond to requests at https://sounds-fishy.onrender.com/api/.
 
 Therefore, you need to modify your application code **before you deploy** to make all API requests to https://sounds-fishy.onrender.com/api/ instead of http://localhost:8088 (or whatever your current URL is).
+
+
+
+
+
+
+
+
+
+
 
 ## Setup
 
@@ -45,6 +61,18 @@ Therefore, you need to modify your application code **before you deploy** to mak
 2. Scroll down and click the **Create Web Service** button.
 
 Then the platform will pull your repository code, install all the `npm` packages, build your project and make it live.
+
+
+
+
+Static sites, like all other Render services, are incredibly easy to deploy.
+
+We support simple HTML/CSS/JS sites as well as the most complex static site generators. 
+
+
+
+
+
 
 ## Notes
 
