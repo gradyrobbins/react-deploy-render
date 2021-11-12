@@ -1,8 +1,12 @@
-# Deploy React Application to render.com
+# Deploy React Application to render.com and have your data persist
 
-This repository is a template you can use to have a straightforward process for deploying your client side capstone to render.com and have your data persist.
+Deploying a "static site" to render.com is free. 
+Their docs have a `Create React App` quick start guide for reference.
 
-Using this template for deploying has a base cost of $7/month because it uses services on the platform that they charge for.
+*BUT*
+
+Storing application data that needs to persist across deploys will incur additional charges, specifically,  `Add an SSD disk to any service`, quoted at $0.25/ GB per month
+
 
 ## Before You Get Started
 
@@ -12,17 +16,25 @@ The code in this repository will start `json-server` for you automatically and s
 
 Therefore, you need to modify your application code **before you deploy** to make all API requests to https://sounds-fishy.onrender.com/api/ instead of http://localhost:8088 (or whatever your current URL is).
 
+
+
+
+
+
+
+
+
+
+
 ## Setup
 
 ### Setting up Repository
 
-1. `cd ~/workspace`
+ `cd ~/workspace`
 1. Fork this repository to your account.
 1. Clone your new repository to your machine.
-    ```sh
-    git clone {github connection string} capstone-deploy
-    ```
-1. `cd capstone-deploy`
+```git clone {github connection string} capstone-deploy```
+1. - [x]  `cd capstone-deploy`
 1. Copy all of your source code into the `src` sub-directory.
 1. If you installed any 3rd party `npm` tools, make sure you install them all again for this repository.
     ```sh
@@ -31,9 +43,9 @@ Therefore, you need to modify your application code **before you deploy** to mak
 
 ### Setting up render Service
 
-1. Go to render.com and create a new account by connecting your Github account.
-1. Once your are logged in, go to the Dashboard.
-1. Create a new service.
+1. - [x]  Go to render.com and create a new account by connecting your Github account.
+1. - [x] Once you are logged in, go to the Dashboard.
+1. - [x]  Create a new service.
 1. Select the `react-deploy-render` repository from the list of your repositories that it shows next.
 1. Provide a name for your service. Should be the name of your project.
 1. Choose `Node` for the Environment field.
@@ -45,10 +57,22 @@ Therefore, you need to modify your application code **before you deploy** to mak
 
 1. In the name field, you can provide any descriptive label you want for this disk (e.g. database)
 1. Mount path should be `/var/data`
-1. Choose `5GB` for the size.
-1. Scroll down and click the **Create Web Service** button.
+1. 1 GB should be enough for small projects.
+2. Scroll down and click the **Create Web Service** button.
 
 Then the platform will pull your repository code, install all the `npm` packages, build your project and make it live.
+
+
+
+
+Static sites, like all other Render services, are incredibly easy to deploy.
+
+We support simple HTML/CSS/JS sites as well as the most complex static site generators. 
+
+
+
+
+
 
 ## Notes
 
