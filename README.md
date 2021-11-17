@@ -14,7 +14,7 @@ When you set up your render.com service, you will be providing a name for it. Li
 
 The code in this repository will start `json-server` for you automatically and set up your service to make your API respond to requests at `https://state-quarters-collector.onrender.com/api`
 
-Therefore,  **before you deploy** you need to modify your application code to make all API requests to `https://state-quarters-collector.onrender.com/api` instead of http://localhost:8088 (or whatever your current URL is).
+Therefore,  **before you deploy** you need to modify your application code to make all API requests to `https://state-quarters-collector.onrender.com/api` instead of `http://localhost:8088` (or whatever your current URL is).
 
 
 
