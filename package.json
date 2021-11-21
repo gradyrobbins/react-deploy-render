@@ -3,16 +3,24 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+        "bcrypt": "^5.0.0",
         "bootstrap": "^4.6.1",
         "concurrently": "^4.1.2",
         "dot-prop": "^5.3.0",
+        "express": "^4.17.1",
+        "express-flash": "0.0.2",
+        "express-session": "^1.16.2",
+        "ejs": "^2.6.2",
         "elliptic": "^6.5.4",
         "handlebars": "^4.7.7",
         "http-proxy": "^1.18.1",
         "immer": "^9.0.6",
         "is-svg": "^4.3.1",
         "json-server": "^0.12.2",
+        "method-override": "^3.0.0",
         "node-forge": "^0.10.0",
+        "passport": "^0.4.0",
+        "passport-local": "^1.0.0",
         "react": "^16.14.0",
         "react-dev-utils": "^11.0.4",
         "react-dom": "^16.14.0",
@@ -26,8 +34,13 @@
         "y18n": "^4.0.3",
         "yargs-parser": "^19.0.4"
     },
+    "devDependencies": {
+      "dotenv": "^8.0.0",
+      "nodemon": "^1.19.1"
+    },
     "scripts": {
         "start": "npm run build && npm run json-serve",
+        "devStart": "nodemon server.js",
         "json-serve": "node server.js",
         "start:dev": "concurrently \"npm run json-serve\" \"react-scripts start\"",
         "build": "react-scripts build",

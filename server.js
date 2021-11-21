@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config()
+}
+
 const initialDbPath = './api/db.json';
 const dbPath = '/var/data/db.json';
 
