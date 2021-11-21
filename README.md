@@ -10,9 +10,10 @@ Storing application data that needs to persist across deploys will incur additio
 
 ## Before You Get Started
 
-When you set up your Render account, the Render platform creates a sub-domain: `https://` < your project name > `.onrender.com/api` for your web app
+When you set up your Render account, the Render platform creates a sub-domain:
+ `https://` < *your project name* > `.onrender.com/api` 
 
-This repository is configured to make your API respond to requests at `https://state-quarters-collector.onrender.com/api` and concurrently start `json-server` 
+This repository is configured to make fetch requests to `https://state-quarters-collector.onrender.com/api` instead of `http://localhost:8088` (or whatever your current URL is).
 
 Therefore,  **before you deploy** you need to modify your application code to make all API requests to `https://state-quarters-collector.onrender.com/api` instead of `http://localhost:8088` (or whatever your current URL is).
 
@@ -52,7 +53,7 @@ Therefore,  **before you deploy** you need to modify your application code to ma
 14. 1 GB should be enough for small projects.
 15. Scroll down and click the **Create Web Service** button.
 
-Then the platform will pull your repository code, install all the `npm` packages, build your project and make it live.
+Then the platform will pull your repository code, install its the `npm` packages, build your project and make it live.
 
 
 ## Notes
