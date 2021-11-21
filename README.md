@@ -10,18 +10,11 @@ Storing application data that needs to persist across deploys will incur additio
 
 ## Before You Get Started
 
-When you set up your render.com service, you will be providing a name for it. Likely your project name. For example, my application "State Quarters Collector", the Render platform will create a domain `https://state-quarters-collector.onrender.com/api` for you.
+When you set up your Render account, the Render platform creates a sub-domain: `https://` < your project name > `.onrender.com/api` for your web app
 
-The code in this repository will start `json-server` for you automatically and set up your service to make your API respond to requests at `https://state-quarters-collector.onrender.com/api`
+This repository is configured to make your API respond to requests at `https://state-quarters-collector.onrender.com/api` and concurrently start `json-server` 
 
 Therefore,  **before you deploy** you need to modify your application code to make all API requests to `https://state-quarters-collector.onrender.com/api` instead of `http://localhost:8088` (or whatever your current URL is).
-
-
-
-
-
-
-
 
 
 
